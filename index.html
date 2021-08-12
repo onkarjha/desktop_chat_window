@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<style type="text/css">
+		:root{
+			--grad:linear-gradient(to bottom right, #8bc34a, #ff9800);
+			--clip: polygon(52% 65%, 100% 38%, 100% 0, 0 0, 0% 38%);
+			--shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+			--c:#eaeaea;
+			--g:#74d800;
+		}::-webkit-scrollbar {
+width: 5px;
+height: 0px;
+border-radius: 10px;
+}
+::-webkit-scrollbar-button {
+width: 0px;
+height: 0px;
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+background: #525965;
+
+border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #525965;
+}
+::-webkit-scrollbar-thumb:active {
+background: #525965;
+}
+::-webkit-scrollbar-track {
+background: transparent;
+border: 0px none #ffffff;
+border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+background: transparent;
+}
+::-webkit-scrollbar-track:active {
+background: transparent;
+}
+::-webkit-scrollbar-corner {
+background: transparent;
+}
+@font-face{
+	src:url("q.ttf");
+	font-family: f;
+}body{
+	font-family: f;background: #f0f2f5;
+}
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}.grad{
+			clip-path: var(--clip);
+			background-image: var(--grad);
+			height: 100vh;
+			width: 100%;
+		}.main_body{
+width:900px;
+height: 600px;
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50% , -50%); 
+box-shadow: var(--shadow);
+border-radius: 5px;
+background: white;display: flex;
+
+		}.left{
+			width:280px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			border-right: 1px solid var(--c);
+			
+		},.left1,.left2,.left3{
+			width: 100%;
+		}.left1{
+			height: 50px;position: sticky;top:0;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			border-bottom: 1px solid var(--c);
+		}.left2{
+			width:280px;
+			height: 50px;position: absolute;top:50px;
+			border-bottom: 1px solid var(--c);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}.left3{
+			width: 280px;
+			height: calc(100% - 100px);
+			overflow-y: auto;
+			margin-top:50px;
+			
+		}.in{
+			border:none;
+			outline: none;
+			font-family: f;margin-left: 10px;width:220px;background:  #f0f2f5;
+			padding: 10px 15px;
+			border-radius: 5px;
+		}.ico1{
+background: var(--g);
+border-radius: 5px;
+
+width:33px;
+display: flex;
+align-items: center;
+justify-content: space-around;color:white;
+height: 33px;margin-right: 10px;
+
+		}.ico11{
+background: var(--g);
+border-radius: 5px;
+
+width:33px;
+display: flex;
+align-items: center;
+justify-content: space-around;color:white;
+height: 33px;
+
+		}ul li{
+			list-style: none;
+		}.friend{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width:100%;
+			transition: 0.6s ease;
+			height: 60px;border-bottom: 1px solid var(--c);
+		}img{
+			width:40px;
+			height: 40px;
+			border-radius: 50px;
+		}.img_name{
+			height: 60px;
+			display: flex;
+			align-items: center;margin-left: 7px;
+
+		}p{
+			color:grey;
+			font-size: 10.5px;
+		}h4{
+			font-size: 13px;
+		}.img_name div{
+			margin-left: 5px;
+		}.time{
+			margin-right: 10px;color:grey;
+			font-size: 11px;
+		}.friend:hover{
+			background: var(--c);
+		}span{
+			color:green;
+			font-weight: bold;
+		}.right{
+			display: flex;
+			flex-direction: column;
+
+		}.right1{
+			height: 50px;
+			width:620px;
+			display: flex;
+			align-items: center;
+			
+			justify-content: space-between;
+			border-bottom: 1px solid var(--c);
+		}.icos{
+			margin-right: 20px;
+			display: flex;
+		}.svg_icon{
+			padding: 7px;
+			border-radius: 5px;
+			background: red;
+			margin-right: 10px;
+		}
+		.right2{
+			height: calc(100% - 100px);
+			width:620px;border-bottom: 1px solid var(--c);
+			overflow-y: auto;
+		
+		}.right3{
+			display: flex;
+			height: 50px;align-items: center;
+			width:621px;overflow-y: auto;
+			justify-content: center;
+		}form{
+			width:590px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			border:1px solid lightgrey;
+			border-radius: 5px;
+
+		}.in2{
+			border:none;
+			outline: none;
+			font-family: f;width:480px;
+		}.top{
+			padding: 10px;
+			border-radius: 5px;
+			background: #cddc39;
+			width:80%;
+			margin:auto;
+		}.p{
+			color:white;font-size: 12px;
+		}#chat{
+         padding-left:0;
+         margin:0;
+         list-style-type:none;
+         overflow-y:scroll;
+    
+         border-bottom:2px solid #fff;
+         }
+         #chat li{
+         padding:10px;
+         }
+         #chat h2,#chat h3{
+         display:inline-block;
+         font-size:11px;
+         font-weight:normal;
+         }
+         #chat h3{
+         color:#bbb;
+         }
+         #chat .entete{
+         margin-bottom:5px;
+         }
+         #chat .message{
+         word-wrap: break-word;
+         color:#fff;
+         line-height:25px;
+         padding: 6px;
+         max-width:90%;
+         display:inline-block;
+         text-align:left;
+         border-radius:5px;
+         font-size: 14px;
+         }
+ 
+         #chat .me{
+         text-align:right;
+         }
+         #chat .you .message{
+         background-color:#58b666;
+         }
+         #chat .me .message{
+         background-color:var(--g);
+         }
+         #chat .triangle{
+         width: 0;
+         height: 0;
+         border-style: solid;
+         border-width: 0 10px 10px 10px;
+         }#chat .you .triangle{
+         border-color: transparent transparent #58b666 transparent;
+         margin-left:15px;
+         }
+         #chat .me .triangle{
+         border-color: transparent transparent var(--g) transparent;
+         margin-left:calc(100% - 30px);
+         }.mess{
+         	color:white;font-size: 13px;
+         }  .blue{
+         background-color:var(--g);
+         margin-right:0;
+         margin-left:7px;
+         }.status{
+         width:8px;
+         height:8px;
+         border-radius:50%;
+         display:inline-block;
+         margin-right:7px;
+         }.i{
+         	height: 23px; width: 23px;
+         }.s{
+         	width:23px;
+         	height: 23px;
+         }
+	</style>
+</head>
+<body>
+<div class="grad"></div>
+<div class="main_body">
+	<div class="left">
+		<div class="left1">
+			<h3>WHATSAPP</h3>
+		</div>
+		<div class="left2">
+			<input type="text" name="" placeholder="Search Your Buddy.." class="in">
+			<div class="ico1"><img src="search.svg" class="s"></div>
+		</div>
+		<div class="left3">
+			<ul>
+				<li>
+					<div class="friend">
+						<div class="img_name">
+							<img src="1.png">
+							<div><h4>Onkar Jha</h4><p>Hi dude! What's going On?</p></div>
+						</div>
+			<div class="time">Today</div>
+					</div>
+					<div class="friend">
+						<div class="img_name">
+							<img src="2.png">
+							<div><h4>John Doe</h4><p><span>Typing...</span></p></div>
+						</div>
+					<div class="time">Yesterday</div>
+					</div>
+					<div class="friend">
+						<div class="img_name">
+							<img src="3.png">
+							<div><h4>Kaleen Bhaiya</h4><p><span>Typing...</span></p></div>
+						</div>
+						<div class="time">4/12/20</div>
+					</div>
+					<div class="friend">
+						<div class="img_name">
+							<img src="4.png">
+							<div><h4>Comedian</h4><p>150 rupaye daga</p></div>
+						</div>
+						<div class="time">10/6/21</div>
+					</div>
+					<div class="friend">
+						<div class="img_name">
+							<img src="5.png">
+							<div><h4>Babu Bhaiya</h4><p>Balti fhek ke marega mai</p></div>
+						</div>
+						<div class="time">21/21/21</div>
+					</div>
+					<div class="friend">
+						<div class="img_name">
+							<img src="6.png">
+							<div><h4>Black Fungus</h4><p>Catch me if u can !!</p></div>
+						</div>
+						<div class="time">09/07/11</div>
+					</div>
+					<div class="friend">
+						<div class="img_name">
+							<img src="7.png">
+							<div><h4>Trump</h4><p>America Dila de..</p></div>
+						</div>
+						<div class="time">11/11/11</div>
+					</div>					
+					<div class="friend">
+						<div class="img_name">
+							<img src="8.png">
+							<div><h4>Joe Biden</h4><p>I am king now</p></div>
+						</div>
+						<div class="time">Today</div>
+					</div>
+										<div class="friend">
+						<div class="img_name">
+							<img src="1.png">
+							<div><h4>Trump</h4><p>America Dila de..</p></div>
+						</div>
+						<div class="time">Today</div>
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="right">
+		<div class="right1">
+			<div class="img_name">
+				<img src="1.png">
+				<div><h4>Onkar</h4><p>active 1 mins ago..</p></div>
+			</div>
+			<div class="icos">
+				<div class="svg_ico">
+					<img class="i" src="ore.svg">
+				</div>
+			</div>
+		</div>
+		<div class="right2"><br>
+			<div class="top">
+				<p class="p">Please rate my work and hire me i will make amazing projects for you at lowest cost.</p>
+			</div>
+			<ul id="chat">
+               <li class="you">
+                  <div class="entete">
+                     <h3>10:12AM, Today</h3>
+
+                  </div>
+                  <div class="triangle"></div>
+                  <div class="message">
+                     <p class="mess">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+               </li>
+               <li class="me">
+                  <div class="entete">
+                     <h3>10:12AM, Today</h3>
+                     <span class="status blue"></span>
+                  </div>
+                  <div class="triangle"></div>
+                  <div class="message">
+                     <p class="mess">sint occaecat cupidatat non
+                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+               </li>              <li class="you">
+                  <div class="entete">
+                     <h3>10:12AM, Today</h3>
+                  </div>
+                  <div class="triangle"></div>
+                  <div class="message">
+                    <p class="mess">I am just fine and you ?</p>
+                  </div>
+               </li>
+               <li class="me">
+                  <div class="entete">
+                     <h3>10:12AM, Today</h3>
+                     <span class="status blue"></span>
+                  </div>
+                  <div class="triangle"></div>
+                  <div class="message">
+                     <p class="mess">Do u know thus UI is created using only Html and Css !!!</p>
+                  </div>
+               </li>    
+               <li class="you">
+                  <div class="entete">
+                     <h3>10:12AM, Today</h3>
+                  </div>
+                  <div class="triangle"></div>
+                  <div class="message">
+                    <p class="mess">Thant's great dear {}</p>
+                  </div>
+               </li>        
+            </ul>
+		</div>
+		<div class="right3">
+			<form>
+				<div class="ico11">+</div>
+				<input type="text" name="" placeholder="Share what's on youe mind ?" class="in2">
+				<div class="ico11"><img src="send.svg" class="s"></div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
